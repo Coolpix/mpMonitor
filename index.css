@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Monitor';
+    src: url("resources/tipo/Alianza Slab 800_0.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Comentario';
+    src: url("resources/tipo/Alianza Slab 500_0.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Escuela';
+    src: url("resources/tipo/Alianza Slab 900_0.otf") format("opentype");
+}
+
+.mpColor{
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input[type=text], select {
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label, textarea, table{
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+table > tbody > tr > td > select{
+    width: 100%;
+}
+
+header{
+    background-color: red;
+}
+
+#plantilla{
+    position: relative;
+}
+
+#myCanvas{
+    position: absolute;
+}

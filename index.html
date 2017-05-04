@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitores</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Evaluación Continua MP</span>
+            <div class="mdl-layout-spacer"></div>
+            <div id="generate">
+                <button class="mpColor" onclick="generateTemplate()">Generar</button>
+                <button class="mpColor" onclick="downloadCanvas()">Descargar</button>
+                <!--<button class="mpColor" onclick="resetTemplate()">Reset</button>-->
+            </div>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div>
+                <span id="comboMonitores">
+                        <label for="monitores">Monitor</label>
+                        <select id="monitores">
+                            <option>Ana</option>
+                            <option>Cris</option>
+                            <option>Dani</option>
+                            <option>Dave</option>
+                            <option>Fran</option>
+                            <option>Iciar</option>
+                            <option>Javi</option>
+                            <option>Jorge</option>
+                            <option>JJ</option>
+                            <option>Lucia</option>
+                            <option>Maria</option>
+                            <option>Mateo</option>
+                            <option>Oscar</option>
+                            <option>Rubs</option>
+                            <option>Sonso</option>
+                        </select>
+                    </span>
+                <span id="comboEscuela">
+                        <label for="escuela">Escuela</label>
+                        <select id="escuela">
+                            <option>Retiro</option>
+                            <option>Madrid Rio</option>
+                            <option>Juan Carlos I</option>
+                            <option>Sanse</option>
+                        </select>
+                    </span>
+                <span id="comboNiveles">
+                        <label for="escuela">Nivel</label>
+                        <select id="niveles">
+                            <option>Basico</option>
+                            <option>Medio</option>
+                            <option>Avanzado</option>
+                            <option>Experto</option>
+                            <option>Experto 2</option>
+                        </select>
+                    </span>
+                <span>
+                    <label for="nombre">Nombre del alumno</label>
+                    <input type="text" id="nombre">
+                </span>
+            </div>
+            <div>
+                <span>
+                    <textarea placeholder="Comentario sobre el alumno" cols="50" rows="5" id="comentario"></textarea>
+                </span>
+                <span id="divTabla"></span>
+            </div>
+            <div id="plantilla">
+                <canvas id="myCanvas"></canvas>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+<script src="https://rawgit.com/eligrey/FileSaver.js/master/FileSaver.js"></script>
+<script src="https://rawgit.com/eligrey/canvas-toBlob.js/master/canvas-toBlob.js"></script>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="index.js"></script>
+</html>
