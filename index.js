@@ -2,6 +2,7 @@ var canvas = document.getElementById('myCanvas');
 var context = canvas.getContext('2d');
 var maxWidth = 1000;
 var lineHeight = 30;
+var generado = false;
 var sourcesNotas = {
   boton0: 'resources/BOTON_0.png',
   boton1: 'resources/BOTON_1.png',
@@ -49,6 +50,7 @@ function loadImages(sources, callback) {
 }
 
 function generateTemplate(){
+    generado = true;
     var nombreAlumno = document.getElementById("nombre").value;
     var nombreEscuela = document.getElementById("escuela").value;
     var nivelAlumno = document.getElementById("niveles").value;
@@ -77,13 +79,6 @@ function generateTemplate(){
         getNotasTecnicas(images);
     });
 }
-
-/*function resetTemplate(){
-    context.clearRect(0,0,1080,1920);
-    loadImages(sourcesPlantilla, function(images) {
-        context.drawImage(images.plantilla, 0, 0);
-    });
-}*/
 
 function getTemplateLevel(images, level){
     switch (level){
@@ -155,11 +150,13 @@ function getNotasTecnicas(images){
     }
 };
 
-function downloadCanvas(link) {
-    var nombreAlumno = document.getElementById("nombre").value;
-    canvas.toBlob(function(blob) {
-        saveAs(blob, "notas_"+nombreAlumno+".png");
-    }, "image/png");
+function downloadCanvas() {
+    if (generado === true){
+        var nombreAlumno = document.getElementById("nombre").value;
+        canvas.toBlob(function(blob) {
+            saveAs(blob, "notas_"+nombreAlumno+".png");
+        }, "image/png");
+    }
 };
 
 function wrapText(context, text, x, y, maxWidth, lineHeight) {
