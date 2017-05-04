@@ -54,3 +54,11 @@ header{
 #myCanvas{
     position: absolute;
 }
+
+.download{
+    background:url(resources/BOTON_IMPRIMIR.png) no-repeat;
+    cursor:pointer;
+    width: 200px;
+    height: 100px;
+    border: none;
+}

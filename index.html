@@ -10,17 +10,16 @@
 </head>
 <body>
 <div class="mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--scroll">
+    <!--<header class="mdl-layout__header mdl-layout__header--scroll">
         <div class="mdl-layout__header-row">
             <span class="mdl-layout-title">Evaluación Continua MP</span>
             <div class="mdl-layout-spacer"></div>
             <div id="generate">
                 <button class="mpColor" onclick="generateTemplate()">Generar</button>
                 <button class="mpColor" onclick="downloadCanvas()">Descargar</button>
-                <!--<button class="mpColor" onclick="resetTemplate()">Reset</button>-->
             </div>
         </div>
-    </header>
+    </header>-->
     <main class="mdl-layout__content">
         <div class="page-content">
             <div>
@@ -66,6 +65,10 @@
                 <span>
                     <label for="nombre">Nombre del alumno</label>
                     <input type="text" id="nombre">
+                </span>
+                <span>
+                    <button class="mpColor" onclick="generateTemplate()">Generar</button>
+                    <button class="mpColor download" onclick="downloadCanvas()"></button>
                 </span>
             </div>
             <div>
