@@ -65,7 +65,20 @@ function generateTemplate(){
         context.font = "30px Monitor";
         context.fillStyle = "#990000";
         context.fillText(nombreMonitor.toUpperCase(),620,340);
-        context.font = "60px Escuela";
+        switch(nombreEscuela){
+            case "Retiro":
+                context.font = "60px Escuela";
+                break;
+            case "Sanse":
+                context.font = "60px Escuela";
+                break;
+            case "Madrid Rio":
+                context.font = "50px Escuela";
+                break;
+            case "Juan Carlos I":
+                context.font = "45px Escuela";
+                break;
+        }
         context.fillStyle = "#990000";
         context.fillText("ESCUELA "+nombreEscuela.toUpperCase(),40,220);
         context.font = "60px Comentario";
